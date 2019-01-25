@@ -8,52 +8,53 @@
 
 import UIKit
 
+private let reuseIdntifier = "MenuOptionCell"
 class DrawerMenuController: UIViewController {
 
-    // MARK -  viewProperties
+ 
+    // MARK - Properties
     
-    @IBOutlet var tableView: UITableView!
-    
-    // MARK -  internalProperties
-    
-    internal var items: [String] = ["hola", "que tal", "estas en", "el menu"]
+    var tableView: UITableView!
     
     // MARK - Init
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureTableCells()
+        configureTableView()
     }
     
     // MARK - Handlers
     
-    func configureTableCells(){
+    func configureTableView(){
+        print("configurando tabla")
+        tableView = UITableView()
+        tableView.delegate = self
+        tableView.dataSource = self
         
-    
-        let identifier = "ItemDrawlerMenuCell"
-        let nib = UINib(nibName: identifier, bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: identifier)
+        tableView.register(MenuItemCell.self, forCellReuseIdentifier: reuseIdntifier)
+        tableView.backgroundColor = .darkGray
+        tableView.separatorStyle = .none
+        tableView.rowHeight = 80
+        
+        view.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
     }
+    
+    
 }
 
 extension DrawerMenuController: UITableViewDelegate, UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("item ", indexPath, " selected")
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: MenuItemCell = tableView.dequeueReusableCell(withIdentifier: "ItemDrawlerMenuCell", for: indexPath) as! MenuItemCell
+        let cell  = tableView.dequeueReusableCell(withIdentifier: reuseIdntifier, for: indexPath) as! MenuItemCell
         
-        cell.lbl.text = items[indexPath.row]
         return cell
     }
 }

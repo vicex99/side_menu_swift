@@ -24,6 +24,9 @@ class ContainerDrawlerController: UIViewController {
 
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     // MARK - Handlers
     
@@ -45,7 +48,7 @@ class ContainerDrawlerController: UIViewController {
         // create the menu view only one time
         if menuController == nil {
             // add menuController here
-            menuController = MainController()
+            menuController = DrawerMenuController()
             view.insertSubview(menuController.view, at: 0)
             addChildViewController(menuController)
             

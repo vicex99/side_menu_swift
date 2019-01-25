@@ -15,27 +15,25 @@ class MainController: UIViewController {
     var delegate: HomeControllerDelegate?
     
     // MARK - Init
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = .white
         configureNavigationBar()
     }
     
-    // MARK - Methods
+    // MARK - Handlers
     
     func configureNavigationBar() {
-        
         navigationController?.navigationBar.barTintColor = .darkGray
         navigationController?.navigationBar.barStyle = .black
         
-        let menuButton = UIBarButtonItem(image: #imageLiteral(resourceName: "parner").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleMenuToggle))
-        
         navigationItem.title = "home"
-        
-        navigationItem.leftBarButtonItem = menuButton
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "parner").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleMenuToggle))
     }
     
     @objc func handleMenuToggle(){
+        print("toggle menu....")
         delegate?.handlemenuToggle()
     }
 
