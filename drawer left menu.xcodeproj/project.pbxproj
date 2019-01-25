@@ -16,6 +16,7 @@
 		C321214121FB5BE6008BEC7C /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321213F21FB5BE6008BEC7C /* MenuItemCell.swift */; };
 		C321214721FB5C61008BEC7C /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321214521FB5C61008BEC7C /* MainController.swift */; };
 		C321214C21FB5DC1008BEC7C /* DrawerMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321214A21FB5DC1008BEC7C /* DrawerMenuController.swift */; };
+		C321215321FB780D008BEC7C /* MenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321215221FB780D008BEC7C /* MenuOptions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		C321213F21FB5BE6008BEC7C /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		C321214521FB5C61008BEC7C /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		C321214A21FB5DC1008BEC7C /* DrawerMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuController.swift; sourceTree = "<group>"; };
+		C321215221FB780D008BEC7C /* MenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		C321213121FB4CE7008BEC7C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C321215221FB780D008BEC7C /* MenuOptions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C321214721FB5C61008BEC7C /* MainController.swift in Sources */,
+				C321215321FB780D008BEC7C /* MenuOptions.swift in Sources */,
 				C321214C21FB5DC1008BEC7C /* DrawerMenuController.swift in Sources */,
 				C321213421FB4D3F008BEC7C /* ContainerDrawlerController.swift in Sources */,
 				C321214121FB5BE6008BEC7C /* MenuItemCell.swift in Sources */,
