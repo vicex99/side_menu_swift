@@ -34,7 +34,7 @@ class MainController: UIViewController {
     
     @objc func handleMenuToggle(){
         print("toggle menu....")
-        delegate?.handlemenuToggle()
+        delegate?.handlemenuToggle(forMenuOption: nil)
     }
 
 }

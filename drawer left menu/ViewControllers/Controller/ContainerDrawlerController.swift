@@ -12,7 +12,7 @@ class ContainerDrawlerController: UIViewController {
 
     // MARK - Properties
     
-    var menuController: UIViewController!
+    var menuController: DrawerMenuController!
     var centerController: UIViewController!
     var isExpanded = false
     
@@ -49,6 +49,7 @@ class ContainerDrawlerController: UIViewController {
         if menuController == nil {
             // add menuController here
             menuController = DrawerMenuController()
+            menuController.delegate = self
             view.insertSubview(menuController.view, at: 0)
             addChildViewController(menuController)
             
@@ -57,7 +58,7 @@ class ContainerDrawlerController: UIViewController {
         }
     }
     
-    func showMenuController(shouldExpand: Bool) {
+    func showMenuController(shouldExpand: Bool, menuOption: MenuOptions?) {
         if shouldExpand {
             // show
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
@@ -66,27 +67,42 @@ class ContainerDrawlerController: UIViewController {
             
         } else {
             // hide
-            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                 self.centerController.view.frame.origin.x = 0
-            }, completion: nil)
+            }) { (_) in
+                guard let menuOptions = menuOption else { return }
+                self.didSelectMenuOption(menuOption: menuOptions)
+            }
+        }
+    }
+    
+    func didSelectMenuOption(menuOption: MenuOptions){
+        switch menuOption {
+        case .Proflie: print("show profile")
+            
+        case .Basket: print("show basket")
+            
+        case .Favourites: print("show favourites")
+            
+        case .us: print("show us")
             
         }
     }
 }
 
 extension ContainerDrawlerController: HomeControllerDelegate {
-    func handlemenuToggle() {
-        
+    func handlemenuToggle(forMenuOption menuOption: MenuOptions?) {
+        print("ENTREEEEEEEEEEEE")
         if !isExpanded {
             configureMenuController()
         }
+        
         
         // change isExpanded when recibe the button clicked
         isExpanded = !isExpanded
         
         // show the menu
-        showMenuController(shouldExpand: isExpanded)
+        showMenuController(shouldExpand: isExpanded, menuOption: menuOption)
+        
     }
-    
-    
 }

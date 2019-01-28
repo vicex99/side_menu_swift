@@ -7,5 +7,6 @@
 //
 
 protocol HomeControllerDelegate {
-    func handlemenuToggle()
+    func handlemenuToggle(forMenuOption menuOption: MenuOptions?)
 }
+
