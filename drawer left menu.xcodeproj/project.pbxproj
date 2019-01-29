@@ -13,10 +13,12 @@
 		C321212821FB4C91008BEC7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C321212621FB4C91008BEC7C /* LaunchScreen.storyboard */; };
 		C321213421FB4D3F008BEC7C /* ContainerDrawlerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321213321FB4D3F008BEC7C /* ContainerDrawlerController.swift */; };
 		C321213A21FB5412008BEC7C /* protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321213921FB5412008BEC7C /* protocols.swift */; };
-		C321214121FB5BE6008BEC7C /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321213F21FB5BE6008BEC7C /* MenuItemCell.swift */; };
 		C321214721FB5C61008BEC7C /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321214521FB5C61008BEC7C /* MainController.swift */; };
-		C321214C21FB5DC1008BEC7C /* DrawerMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321214A21FB5DC1008BEC7C /* DrawerMenuController.swift */; };
 		C321215321FB780D008BEC7C /* MenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321215221FB780D008BEC7C /* MenuOptions.swift */; };
+		C3F8F5572200ACDE00C954B7 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8F5552200ACDE00C954B7 /* MenuItemCell.swift */; };
+		C3F8F5582200ACDE00C954B7 /* MenuItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F8F5562200ACDE00C954B7 /* MenuItemCell.xib */; };
+		C3F8F55B2200AE9300C954B7 /* DrawerMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8F5592200AE9300C954B7 /* DrawerMenuController.swift */; };
+		C3F8F55C2200AE9300C954B7 /* DrawerMenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F8F55A2200AE9300C954B7 /* DrawerMenuController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +30,12 @@
 		C321212921FB4C91008BEC7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C321213321FB4D3F008BEC7C /* ContainerDrawlerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerDrawlerController.swift; sourceTree = "<group>"; };
 		C321213921FB5412008BEC7C /* protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocols.swift; sourceTree = "<group>"; };
-		C321213F21FB5BE6008BEC7C /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		C321214521FB5C61008BEC7C /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
-		C321214A21FB5DC1008BEC7C /* DrawerMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuController.swift; sourceTree = "<group>"; };
 		C321215221FB780D008BEC7C /* MenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptions.swift; sourceTree = "<group>"; };
+		C3F8F5552200ACDE00C954B7 /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
+		C3F8F5562200ACDE00C954B7 /* MenuItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuItemCell.xib; sourceTree = "<group>"; };
+		C3F8F5592200AE9300C954B7 /* DrawerMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuController.swift; sourceTree = "<group>"; };
+		C3F8F55A2200AE9300C954B7 /* DrawerMenuController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawerMenuController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +94,8 @@
 		C321213021FB4CE5008BEC7C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				C321213F21FB5BE6008BEC7C /* MenuItemCell.swift */,
+				C3F8F5552200ACDE00C954B7 /* MenuItemCell.swift */,
+				C3F8F5562200ACDE00C954B7 /* MenuItemCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -130,7 +135,8 @@
 		C321214921FB5DA1008BEC7C /* MenuController */ = {
 			isa = PBXGroup;
 			children = (
-				C321214A21FB5DC1008BEC7C /* DrawerMenuController.swift */,
+				C3F8F5592200AE9300C954B7 /* DrawerMenuController.swift */,
+				C3F8F55A2200AE9300C954B7 /* DrawerMenuController.xib */,
 			);
 			path = MenuController;
 			sourceTree = "<group>";
@@ -194,6 +200,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C321212821FB4C91008BEC7C /* LaunchScreen.storyboard in Resources */,
+				C3F8F55C2200AE9300C954B7 /* DrawerMenuController.xib in Resources */,
+				C3F8F5582200ACDE00C954B7 /* MenuItemCell.xib in Resources */,
 				C321212521FB4C90008BEC7C /* Assets.xcassets in Resources */,
 				C321212321FB4C8B008BEC7C /* Main.storyboard in Resources */,
 			);
@@ -207,10 +215,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C321214721FB5C61008BEC7C /* MainController.swift in Sources */,
+				C3F8F5572200ACDE00C954B7 /* MenuItemCell.swift in Sources */,
 				C321215321FB780D008BEC7C /* MenuOptions.swift in Sources */,
-				C321214C21FB5DC1008BEC7C /* DrawerMenuController.swift in Sources */,
+				C3F8F55B2200AE9300C954B7 /* DrawerMenuController.swift in Sources */,
 				C321213421FB4D3F008BEC7C /* ContainerDrawlerController.swift in Sources */,
-				C321214121FB5BE6008BEC7C /* MenuItemCell.swift in Sources */,
 				C321213A21FB5412008BEC7C /* protocols.swift in Sources */,
 				C321211E21FB4C8B008BEC7C /* AppDelegate.swift in Sources */,
 			);
