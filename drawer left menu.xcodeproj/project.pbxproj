@@ -15,6 +15,9 @@
 		C321213A21FB5412008BEC7C /* protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321213921FB5412008BEC7C /* protocols.swift */; };
 		C321214721FB5C61008BEC7C /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321214521FB5C61008BEC7C /* MainController.swift */; };
 		C321215321FB780D008BEC7C /* MenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321215221FB780D008BEC7C /* MenuOptions.swift */; };
+		C3B1608C2204A9CE00D50544 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1608B2204A9CE00D50544 /* TabBarController.swift */; };
+		C3B160902204AA1C00D50544 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1608E2204AA1C00D50544 /* ViewController.swift */; };
+		C3B160912204AA1C00D50544 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B1608F2204AA1C00D50544 /* ViewController.xib */; };
 		C3F8F5572200ACDE00C954B7 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8F5552200ACDE00C954B7 /* MenuItemCell.swift */; };
 		C3F8F5582200ACDE00C954B7 /* MenuItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F8F5562200ACDE00C954B7 /* MenuItemCell.xib */; };
 		C3F8F55B2200AE9300C954B7 /* DrawerMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8F5592200AE9300C954B7 /* DrawerMenuController.swift */; };
@@ -32,6 +35,9 @@
 		C321213921FB5412008BEC7C /* protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocols.swift; sourceTree = "<group>"; };
 		C321214521FB5C61008BEC7C /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		C321215221FB780D008BEC7C /* MenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptions.swift; sourceTree = "<group>"; };
+		C3B1608B2204A9CE00D50544 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		C3B1608E2204AA1C00D50544 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C3B1608F2204AA1C00D50544 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		C3F8F5552200ACDE00C954B7 /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		C3F8F5562200ACDE00C954B7 /* MenuItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuItemCell.xib; sourceTree = "<group>"; };
 		C3F8F5592200AE9300C954B7 /* DrawerMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuController.swift; sourceTree = "<group>"; };
@@ -84,6 +90,7 @@
 		C321212F21FB4CE3008BEC7C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C3B1608D2204A9F500D50544 /* othersViewControllers */,
 				C321214921FB5DA1008BEC7C /* MenuController */,
 				C321214421FB5C31008BEC7C /* MainController */,
 				C321214321FB5C24008BEC7C /* Controller */,
@@ -120,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				C321213321FB4D3F008BEC7C /* ContainerDrawlerController.swift */,
+				C3B1608B2204A9CE00D50544 /* TabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -139,6 +147,15 @@
 				C3F8F55A2200AE9300C954B7 /* DrawerMenuController.xib */,
 			);
 			path = MenuController;
+			sourceTree = "<group>";
+		};
+		C3B1608D2204A9F500D50544 /* othersViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C3B1608E2204AA1C00D50544 /* ViewController.swift */,
+				C3B1608F2204AA1C00D50544 /* ViewController.xib */,
+			);
+			path = othersViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +220,7 @@
 				C3F8F55C2200AE9300C954B7 /* DrawerMenuController.xib in Resources */,
 				C3F8F5582200ACDE00C954B7 /* MenuItemCell.xib in Resources */,
 				C321212521FB4C90008BEC7C /* Assets.xcassets in Resources */,
+				C3B160912204AA1C00D50544 /* ViewController.xib in Resources */,
 				C321212321FB4C8B008BEC7C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,7 +233,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C321214721FB5C61008BEC7C /* MainController.swift in Sources */,
+				C3B1608C2204A9CE00D50544 /* TabBarController.swift in Sources */,
 				C3F8F5572200ACDE00C954B7 /* MenuItemCell.swift in Sources */,
+				C3B160902204AA1C00D50544 /* ViewController.swift in Sources */,
 				C321215321FB780D008BEC7C /* MenuOptions.swift in Sources */,
 				C3F8F55B2200AE9300C954B7 /* DrawerMenuController.swift in Sources */,
 				C321213421FB4D3F008BEC7C /* ContainerDrawlerController.swift in Sources */,

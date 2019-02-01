@@ -13,7 +13,7 @@ class ContainerDrawlerController: UIViewController {
     // MARK - Properties
     
     var menuController: DrawerMenuController!
-    var centerController: UIViewController!
+    var centerController: TabBarController!
     var isExpanded = false
     
     // MARK - Init
@@ -33,12 +33,13 @@ class ContainerDrawlerController: UIViewController {
     // aqui iria la navegacion con las vistas de la app, y el toolbar
     func configureHomeController() {
         
-        let mainController = MainController()
-        centerController = UINavigationController(rootViewController: mainController)
-        mainController.delegate = self
+        if centerController == nil {
+            centerController = TabBarController()
+            centerController.delegateNavigation = self
+            centerController.configureNavigationController()
+        }
         
-        
-        view.addSubview(centerController.view)
+        view.addSubview((centerController.selectedViewController?.view)!)
         addChildViewController(centerController)
         centerController.didMove(toParentViewController: self)
         
@@ -97,7 +98,7 @@ extension ContainerDrawlerController: HomeControllerDelegate {
             configureMenuController()
         }
         
-        
+        configureHomeController()
         // change isExpanded when recibe the button clicked
         isExpanded = !isExpanded
         
