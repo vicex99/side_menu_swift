@@ -8,28 +8,25 @@
 
 import UIKit
 
-class TabBarNavegation: UITabBarController {
-
+class TabBarNevigation: UITabBarController {
+    
+    
+    internal var newsVC: MainController = MainController()
+    internal var news2VC: MainController = MainController()
+    internal var news3VC: MainController = MainController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func configureNavigationController() {
+        
+        let newsNavigationController = UINavigationController(rootViewController: newsVC)
+        
+        let news2NavigationController = UINavigationController(rootViewController: news2VC)
+        
+        let news3NavigationController = UINavigationController(rootViewController: news3VC)
+        
+        self.viewControllers = [newsNavigationController, news2NavigationController, news3NavigationController]
     }
-    */
-
 }
