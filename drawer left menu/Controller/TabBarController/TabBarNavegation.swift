@@ -11,9 +11,9 @@ import UIKit
 class TabBarNevigation: UITabBarController {
     
     
-    internal var newsVC: MainController = MainController()
-    internal var news2VC: MainController = MainController()
-    internal var news3VC: MainController = MainController()
+    internal var newsVC: AppViewController = AppViewController()
+    internal var news2VC: AppViewController = AppViewController()
+    internal var news3VC: AppViewController = AppViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
