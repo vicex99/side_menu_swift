@@ -15,6 +15,7 @@
 		C321213A21FB5412008BEC7C /* protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321213921FB5412008BEC7C /* protocols.swift */; };
 		C321214721FB5C61008BEC7C /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321214521FB5C61008BEC7C /* MainController.swift */; };
 		C321215321FB780D008BEC7C /* MenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321215221FB780D008BEC7C /* MenuOptions.swift */; };
+		C32D2BA2220857C100A6841B /* DrawerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D2BA1220857C100A6841B /* DrawerMenu.swift */; };
 		C3B1608C2204A9CE00D50544 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1608B2204A9CE00D50544 /* TabBarController.swift */; };
 		C3B160902204AA1C00D50544 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1608E2204AA1C00D50544 /* ViewController.swift */; };
 		C3B160912204AA1C00D50544 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B1608F2204AA1C00D50544 /* ViewController.xib */; };
@@ -35,6 +36,7 @@
 		C321213921FB5412008BEC7C /* protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocols.swift; sourceTree = "<group>"; };
 		C321214521FB5C61008BEC7C /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		C321215221FB780D008BEC7C /* MenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptions.swift; sourceTree = "<group>"; };
+		C32D2BA1220857C100A6841B /* DrawerMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenu.swift; sourceTree = "<group>"; };
 		C3B1608B2204A9CE00D50544 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		C3B1608E2204AA1C00D50544 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C3B1608F2204AA1C00D50544 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			children = (
 				C3F8F5592200AE9300C954B7 /* DrawerMenuController.swift */,
 				C3F8F55A2200AE9300C954B7 /* DrawerMenuController.xib */,
+				C32D2BA1220857C100A6841B /* DrawerMenu.swift */,
 			);
 			path = MenuController;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C321214721FB5C61008BEC7C /* MainController.swift in Sources */,
+				C32D2BA2220857C100A6841B /* DrawerMenu.swift in Sources */,
 				C3B1608C2204A9CE00D50544 /* TabBarController.swift in Sources */,
 				C3F8F5572200ACDE00C954B7 /* MenuItemCell.swift in Sources */,
 				C3B160902204AA1C00D50544 /* ViewController.swift in Sources */,

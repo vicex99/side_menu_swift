@@ -12,7 +12,7 @@ class ContainerDrawlerController: UIViewController {
 
     // MARK - Properties
     
-    var menuController: DrawerMenuController!
+    var menuController: DrawerMenuView!
     var centerController: TabBarController!
     var isExpanded = false
     
@@ -49,31 +49,24 @@ class ContainerDrawlerController: UIViewController {
         // create the menu view only one time
         if menuController == nil {
             // add menuController here
-            menuController = DrawerMenuController()
+            menuController = DrawerMenuView()
             menuController.delegate = self
-            view.insertSubview(menuController.view, at: 0)
-            addChildViewController(menuController)
             
-            menuController.didMove(toParentViewController: self)
             print("menu controller added...")
         }
     }
     
-    func showMenuController(shouldExpand: Bool, menuOption: MenuOptions?) {
-        if shouldExpand {
+    func showMenuController(menuOption: MenuOptions?) {
+        print("eligiendooooooooo")
+        if isExpanded {
+            print("show")
             // show
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
-                self.centerController.view.frame.origin.x = self.centerController.view.frame.width - 80
-                }, completion: nil)
+            menuController.show(controller: self)
             
         } else {
+            print("hide")
             // hide
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-                self.centerController.view.frame.origin.x = 0
-            }) { (_) in
-                guard let menuOptions = menuOption else { return }
-                self.didSelectMenuOption(menuOption: menuOptions)
-            }
+            menuController.hide(controller: self, menuOption: menuOption!)
         }
     }
     
@@ -103,7 +96,7 @@ extension ContainerDrawlerController: HomeControllerDelegate {
         isExpanded = !isExpanded
         
         // show the menu
-        showMenuController(shouldExpand: isExpanded, menuOption: menuOption)
+        showMenuController(menuOption: menuOption)
         
     }
 }

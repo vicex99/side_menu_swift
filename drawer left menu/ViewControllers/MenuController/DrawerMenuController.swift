@@ -10,7 +10,7 @@ import UIKit
 
 
 private let reuseIdntifier = "MenuItemCell"
-class DrawerMenuController: UIViewController {
+class DrawerMenuView: UIView {
     
     
     // MARK - Properties
@@ -18,12 +18,7 @@ class DrawerMenuController: UIViewController {
     @IBOutlet var tableView: UITableView!
     internal var delegate: HomeControllerDelegate!
     
-    // MARK - Init
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        configureTableView()
-    }
+
     
     // MARK - Handlers
     
@@ -36,9 +31,25 @@ class DrawerMenuController: UIViewController {
         tableView.separatorStyle = .none
         
     }
+    
+    func show(controller: ContainerDrawlerController){
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
+            controller.centerController.view.frame.origin.x = controller.centerController.view.frame.width - 80
+            
+        }, completion: nil)
+    }
+    
+    func hide(controller: ContainerDrawlerController, menuOption: MenuOptions){
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            controller.centerController.view.frame.origin.x = 0
+        }) { (_) in
+            guard let menuOptions: MenuOptions = menuOption else { return }
+            controller.didSelectMenuOption(menuOption: menuOptions)
+        }
+    }
 }
 
-extension DrawerMenuController: UITableViewDelegate, UITableViewDataSource {
+extension DrawerMenuView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
