@@ -17,8 +17,13 @@ class ContainerController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(toggleSideMenu), name: NSNotification.Name("ToggleSideMenu"), object: nil)
+        
+        setListeners()
+        
+    }
+    
+    func setListeners(){
+        NotificationCenter.default.addObserver(self, selector: #selector(toggleSideMenu), name: NSNotification.Name("ToggleSideMenu"), object: nil)
     }
     
     @objc func toggleSideMenu(){

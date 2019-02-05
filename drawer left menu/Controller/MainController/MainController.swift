@@ -11,10 +11,5 @@ import UIKit
 class MainController: UIViewController {
     
     
-    @IBAction func onMoreTapped() {
-        print("sidee menuuu")
-        
-        // observer que indica que ya se puede abrir el navegador
-        NotificationCenter.default.post(name: NSNotification.Name("ToggleSideMenu"), object: nil )
-    }
+    
 }

@@ -11,5 +11,9 @@ import UIKit
 class AppViewController: UIViewController {
 
     @IBOutlet weak var lblText: UILabel!
+    
+    convenience init(nibName nibNameOrNil: String?) {
+        self.init()
+    }
 
 }

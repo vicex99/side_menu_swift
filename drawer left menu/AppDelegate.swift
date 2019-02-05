@@ -15,8 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
 
         return true
+    }
+    
+    func configureTabBar(_ tabBarController: TabBarNevigation){
+         if let window = window {
+            
+           
+            
+            window.makeKeyAndVisible()
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
